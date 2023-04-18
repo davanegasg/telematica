@@ -26,13 +26,17 @@ class MyServer:
             client_thread = threading.Thread(target=self.handle_client_request, args=(client_connection, client_address))
             client_thread.start()
     
-        
+    def log(self, message):
+        print(message)    
 
     def handle_client_request(self, client_connection,client_socket):
         data = client_connection.recv(1024)
         request = str(data.decode('utf-8'))
+        print(f"Received request from {client_socket}: {request}")
         request_method = request.split(' ')[0]
         request_path = request.split(' ')[1]
+
+        
 
         if request_method == 'GET':
             if request_path == '/' :
@@ -64,6 +68,7 @@ class MyServer:
             # Handle POST request
             content_length = request.split('Content-Length: ')[1].split('\r\n')[0]
             data = client_connection.recv(int(content_length))
+            print(data)
             post_data = str(data.decode('utf-8'))
             name = post_data.split('name=')[1].split('&')[0]
             response_body = f"<h1>Hello, {name}!</h1>".encode('utf-8')

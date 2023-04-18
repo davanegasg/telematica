@@ -1,3 +1,4 @@
+
 # Introducción
 El proyecto consiste en la implementación de un servidor web (TWS) que permite procesar peticiones con la versión de protocolo HTTP/1.1. El servidor se desarrolló utilizando la API Berkeley Sockets y es capaz de analizar tres tipos de métodos a nivel de HTTPRequest: GET, HEAD y POST, de acuerdo con la especificación del estándar de HTTP/1.1 RFC 2616. El servidor también es capaz de manejar errores, con códigos de respuesta 200, 400 y 404.
 
