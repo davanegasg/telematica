@@ -10,3 +10,7 @@ Para probar el funcionamiento del servidor, se desplegó en la infraestructura d
 El proyecto ha logrado implementar con éxito un servidor web (TWS) que cumple con los requerimientos establecidos en el alcance del proyecto. El servidor es capaz de procesar peticiones HTTP/1.1, manejar errores de manera robusta, implementar el concepto de "logger" y procesar peticiones de manera concurrente utilizando hilos. El despliegue en la infraestructura de AWS ha sido exitoso y se han realizado pruebas exhaustivas utilizando diferentes recursos web.
 
 #Referencias
+Linux Manual Page: socket()
+Beej's Guide to Network Programming
+Ejemplo Client/Server en C
+Especificación del estándar de HTTP/1.1 RFC 2616 (https://datatracker.ietf.org/doc/rfc2616/)
