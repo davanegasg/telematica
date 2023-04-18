@@ -12,8 +12,10 @@ Para probar el funcionamiento del servidor, se desplegó en los servicios web de
 Hemos logrado implementar con éxito un servidor web (TWS) que cumple con los requerimientos establecidos en el alcance del proyecto. El servidor es capaz de procesar peticiones HTTP/1.1, tener en cuenta el manejo de errores, implementar el concepto de "logger" y procesar peticiones de manera constante. El despliegue en la infraestructura de AWS ha sido exitoso y se han realizado pruebas utilizando diferentes recursos web.
 
 # Referencias
-https://man7.org/linux/man-pages/man7/socket.7.html
-https://www.geeksforgeeks.org/tcp-server-client-implementation-in-c/
-https://datatracker.ietf.org/doc/rfc2616/
-https://www.postman.com
-https://aws.amazon.com/es/training/awsacademy/
+<ul>
+<li>https://man7.org/linux/man-pages/man7/socket.7.html</li>
+<li>https://www.geeksforgeeks.org/tcp-server-client-implementation-in-c/</li>
+<li>https://datatracker.ietf.org/doc/rfc2616/</li>
+<li>https://www.postman.com</li>
+<li>https://aws.amazon.com/es/training/awsacademy/</li>
+</ul>
