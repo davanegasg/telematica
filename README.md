@@ -1,16 +1,19 @@
-#Introducción
-El proyecto consiste en la implementación de un servidor web (TWS) que permite procesar peticiones con la versión de protocolo HTTP/1.1. El servidor se desarrolló utilizando la API Berkeley Sockets y es capaz de analizar (parsing) tres tipos de métodos a nivel de HTTPRequest: GET, HEAD y POST, de acuerdo con la especificación del estándar de HTTP/1.1 RFC 2616. El servidor también es capaz de manejar errores de manera robusta, con códigos de respuesta 200, 400 y 404.
+# Introducción
+El proyecto consiste en la implementación de un servidor web (TWS) que permite procesar peticiones con la versión de protocolo HTTP/1.1. El servidor se desarrolló utilizando la API Berkeley Sockets y es capaz de analizar tres tipos de métodos a nivel de HTTPRequest: GET, HEAD y POST, de acuerdo con la especificación del estándar de HTTP/1.1 RFC 2616. El servidor también es capaz de manejar errores, con códigos de respuesta 200, 400 y 404.
 
-#Desarrollo
-El servidor TWS implementa el concepto de "logger", lo que permite visualizar por la terminal todas las peticiones entrantes a nivel de HTTP, así como la respuesta que se envía a cada cliente. El servidor es capaz de procesar peticiones de manera concurrente, utilizando una aproximación Thread Based para el manejo de la concurrencia, lo que permite manejar múltiples peticiones de forma eficiente.
+# Desarrollo
+El servidor TWS implementa el concepto de "logger", lo que permite visualizar por la terminal todas las peticiones entrantes a nivel de HTTP, así como la respuesta que se envía a cada cliente. El servidor es capaz de procesar peticiones de manera constante, utilizando una aproximación Thread Based para el manejo de esto mismo, lo que permite manejar múltiples peticiones de forma eficiente.
 
-Para probar el funcionamiento del servidor, se desplegó en la infraestructura de AWS. Se realizaron pruebas utilizando diferentes recursos web, como páginas con hipertextos e imágenes, así como archivos de gran tamaño (1MB). Se utilizaron herramientas como telnet, scripts en Python, Postman y Wireshark, así como navegadores web reales para realizar pruebas exhaustivas del servidor.
+El servidor es compatible con tres tipos de métodos a nivel de HTTPRequest: GET, HEAD y POST. El método GET permite obtener recursos del servidor, el método HEAD permite obtener solo los encabezados de respuesta sin el cuerpo del recurso que fue solicitado, y el método POST permite enviar datos al servidor para su procesamiento.
 
-#Conclusiones
-El proyecto ha logrado implementar con éxito un servidor web (TWS) que cumple con los requerimientos establecidos en el alcance del proyecto. El servidor es capaz de procesar peticiones HTTP/1.1, manejar errores de manera robusta, implementar el concepto de "logger" y procesar peticiones de manera concurrente utilizando hilos. El despliegue en la infraestructura de AWS ha sido exitoso y se han realizado pruebas exhaustivas utilizando diferentes recursos web.
+Para probar el funcionamiento del servidor, se desplegó en los servicios web de Amazon (AWS). Se realizaron pruebas utilizando diferentes recursos web, como páginas con hipertextos e imágenes, así como archivos de gran tamaño que en este caso son de 1MB. Se utilizaron herramientas como telnet, scripts en Python, Postman y Wireshark, así como navegadores web reales para realizar pruebas del servidor.
 
-#Referencias
-Linux Manual Page: socket()
-Beej's Guide to Network Programming
-Ejemplo Client/Server en C
-Especificación del estándar de HTTP/1.1 RFC 2616 (https://datatracker.ietf.org/doc/rfc2616/)
+# Conclusiones
+Hemos logrado implementar con éxito un servidor web (TWS) que cumple con los requerimientos establecidos en el alcance del proyecto. El servidor es capaz de procesar peticiones HTTP/1.1, tener en cuenta el manejo de errores, implementar el concepto de "logger" y procesar peticiones de manera constante. El despliegue en la infraestructura de AWS ha sido exitoso y se han realizado pruebas utilizando diferentes recursos web.
+
+# Referencias
+https://man7.org/linux/man-pages/man7/socket.7.html
+https://www.geeksforgeeks.org/tcp-server-client-implementation-in-c/
+https://datatracker.ietf.org/doc/rfc2616/
+https://www.postman.com
+https://aws.amazon.com/es/training/awsacademy/
