@@ -9,7 +9,7 @@ El servidor es compatible con tres tipos de métodos a nivel de HTTPRequest: GET
 
 Para probar el funcionamiento del servidor, se desplegó en los servicios web de Amazon (AWS). Se realizaron pruebas utilizando diferentes recursos web, como páginas con hipertextos e imágenes, así como archivos de gran tamaño que en este caso son de 1MB. Se utilizaron herramientas como telnet, scripts en Python, Postman y Wireshark, así como navegadores web reales para realizar pruebas del servidor.
 
-Paso a paso para conetar al AWS:
+Paso a paso para conetar al AWS (Previamente debes cambiar la IP de el archivo Constants.py y poner la IP privada de AWS):
 1. Haces Login en AWS academy
 2. entras en cursos y luego en modulos
 3. entras en laboratorio de aprendizaje
@@ -24,12 +24,22 @@ Paso a paso para conetar al AWS:
 
 Cómo hacer un GET, HEAD y POST request
 
-Para el método GET, simplemente debemos ingresar el Request GET y la URL a la cuál le queremos hacer el GET
+Para los métodos GET y HEAD, simplemente debemos ingresar el Request GET o HEAD y la URL a la cuál le queremos hacer el GET
 
 Ejemplo
 
 ```
 GET http://3.87.227.208:8080/caso1/template1
+
+HEAD http://3.87.227.208:8080/caso1/template1
+```
+
+Nuestro método POST solamente nos permite ingresar una variable name y nos devuelve un body diciendo "Hello, {name}" 
+
+```
+POST http://3.87.227.208:8080/caso1/template1
+
+name=Ricardo
 ```
 
 
