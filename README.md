@@ -28,9 +28,9 @@ Para el método GET, simplemente debemos ingresar el Request GET y la URL a la c
 
 Ejemplo
 
-'''
+```
 GET http://3.87.227.208:8080/caso1/template1
-'''
+```
 
 
 # Conclusiones
