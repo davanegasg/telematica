@@ -22,6 +22,17 @@ Paso a paso para conetar al AWS:
 10. cuando estes dentro de la carpeta escribes "python 3 server.py" para correr el server.
 11. Verificas que funcione y ya estaria listo
 
+Cómo hacer un GET, HEAD y POST request
+
+Para el método GET, simplemente debemos ingresar el Request GET y la URL a la cuál le queremos hacer el GET
+
+Ejemplo
+
+'''
+GET http://3.87.227.208:8080/caso1/template1
+'''
+
+
 # Conclusiones
 Hemos logrado implementar con éxito un servidor web (TWS) que cumple con los requerimientos establecidos en el alcance del proyecto. El servidor es capaz de procesar peticiones HTTP/1.1, tener en cuenta el manejo de errores, implementar el concepto de "logger" y procesar peticiones de manera constante. El despliegue en la infraestructura de AWS ha sido exitoso y se han realizado pruebas utilizando diferentes recursos web.
 
